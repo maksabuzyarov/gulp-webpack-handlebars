@@ -1,0 +1,17 @@
+{
+  "name": "gulp-webpack-hbs",
+  "version": "1.0.0",
+  "description": "Gulp frontend builder with Webpack and Handlebars",
+  "main": "index.js",
+  "scripts": {
+    "test": "console.log('Tests Completed!')"
+  },
+  "keywords": [
+    "gulp",
+    "webpack",
+    "handlebars",
+    "frontend"
+  ],
+  "author": "MaksAbuzyarov",
+  "license": "ISC"
+}
