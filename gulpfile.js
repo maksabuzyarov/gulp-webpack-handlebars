@@ -4,7 +4,7 @@ const gulp = require('gulp');
 const notifier = require('node-notifier');
 
 // -------------------------------------
-//   Available tasks:
+//   Available tasks
 // -------------------------------------
 //     say:hello
 // *************************************
