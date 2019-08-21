@@ -4,7 +4,9 @@
   "description": "Gulp frontend builder with Webpack and Handlebars",
   "main": "index.js",
   "scripts": {
-    "test": "console.log('Tests Completed!')"
+    "dev": "gulp",
+    "build": "gulp build --production",
+    "build styles": "gulp styles --production"
   },
   "keywords": [
     "gulp",
@@ -23,6 +25,7 @@
     "gulp-clean-css": "^4.2.0",
     "gulp-debug": "^4.0.0",
     "gulp-favicons": "^2.3.1",
+    "gulp-if": "^3.0.0",
     "gulp-imagemin": "^6.0.0",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.1",
@@ -40,7 +43,8 @@
     "imagemin-zopfli": "^6.0.0",
     "node-notifier": "^5.4.0",
     "webpack": "^4.30.0",
-    "webpack-stream": "^5.2.1"
+    "webpack-stream": "^5.2.1",
+    "yargs": "^14.0.0"
   },
   "author": "MaksAbuzyarov",
   "license": "ISC"
