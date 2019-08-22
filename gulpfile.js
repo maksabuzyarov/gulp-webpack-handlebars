@@ -7,6 +7,7 @@ const plumber = require('gulp-plumber');
 const gulpIf = require('gulp-if');
 const yargs =  require('yargs');
 const del = require('del');
+const changed = require('gulp-changed');
 
 // Compile:
 const rename = require('gulp-rename');
@@ -16,6 +17,13 @@ const sourcemaps = require('gulp-sourcemaps');
 const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const sass = require('gulp-sass');
+
+// Images:
+const imagemin = require('gulp-imagemin');
+const imageminPngquant = require('imagemin-pngquant');
+const imageminZopfli = require('imagemin-zopfli');
+const imageminMozjpeg = require('imagemin-mozjpeg');
+const imageminGiflossy = require('imagemin-giflossy');
 
 const argv = yargs.argv;
 const production = !!argv.production;
@@ -38,6 +46,49 @@ const paths = {
     dist: './dist/assets/fonts/',
     watch: './src/fonts/**/*.{woff,woff2,eot,ttf,svg}'
   },
+  images: {
+    src: [
+      "./src/img/**/*.{jpg,jpeg,png,gif,tiff,svg}"
+    ],
+    dist: "./dist/assets/img/",
+    watch: "./src/img/**/*.{jpg,jpeg,png,gif,svg,tiff}"
+  }
+};
+
+const config = {
+  imagemin: [
+    imageminGiflossy({
+      optimizationLevel: 3,
+      optimize: 3,
+      lossy: 2
+    }),
+    imageminPngquant({
+      speed: 5,
+      quality: [0.8, 0.95]
+    }),
+    imageminZopfli({
+      more: true
+    }),
+    imageminMozjpeg({
+      progressive: true,
+      quality: 90
+    }),
+    imagemin.jpegtran({
+      progressive: true,
+    }),
+    imagemin.svgo({
+      plugins: [
+        { removeViewBox: false },
+        { removeUnusedNS: false },
+        { removeUselessStrokeAndFill: false },
+        { cleanupIDs: false },
+        { removeComments: true },
+        { removeEmptyAttrs: true },
+        { removeEmptyText: true },
+        { collapseGroups: true }
+      ]
+    })
+  ]
 };
 
 // -------------------------------------
@@ -66,6 +117,17 @@ gulp.task('styles', function () {
 gulp.task('fonts', function () {
   return gulp.src(paths.fonts.src)
     .pipe(gulp.dest(paths.fonts.dist));
+});
+
+// -------------------------------------
+//   Task: images
+// -------------------------------------
+
+gulp.task('images', function () {
+  return gulp.src(paths.images.src)
+    .pipe(changed(paths.images.dist))
+    .pipe(imagemin(config.imagemin))
+    .pipe(gulp.dest(paths.images.dist));
 });
 
 // -------------------------------------
