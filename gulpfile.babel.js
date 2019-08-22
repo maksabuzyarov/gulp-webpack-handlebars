@@ -7,6 +7,7 @@ const yargs = require('yargs');
 const gulpIf = require('gulp-if');
 const changed = require('gulp-changed');
 const plumber = require('gulp-plumber');
+const replace = require('gulp-replace');
 const notifier = require('node-notifier');
 const browsersync = require('browser-sync');
 
@@ -215,6 +216,8 @@ gulp.task('views', function (done) {
     .pipe(beautify.html({
       indent_size: 2, preserve_newlines: false,
     }))
+    .pipe(gulpIf(production, replace("main.css", "main.min.css")))
+    .pipe(gulpIf(production, replace("main.js", "main.min.js")))
     .pipe(gulp.dest(paths.views.dist))
     .on("end", browsersync.reload);
 });
