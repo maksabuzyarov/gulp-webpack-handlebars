@@ -157,7 +157,9 @@ gulp.task('styles', function () {
   return gulp.src(paths.styles.src)
     .pipe(plumber())
     .pipe(gulpIf(!production, sourcemaps.init()))
-    .pipe(sass())
+    .pipe(sass({
+      includePaths: ['node_modules']
+    }))
     .pipe(autoprefixer())
     .pipe(gulp.dest(paths.styles.dist))
     .pipe(cleanCSS())

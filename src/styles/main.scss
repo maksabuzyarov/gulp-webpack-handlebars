@@ -1,9 +1,5 @@
 
 @import 'variables';
 
-html, body {
-    height: 100%;
-    margin: 0;
+@import "bootstrap/scss/bootstrap";
 
-    background: oldlace;
-}

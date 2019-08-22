@@ -1,5 +1,41 @@
-{{> header }}
+{{> header title="Index page"}}
 
-  <h1>View Index Template {{assets}}</h1>
+  <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+    <h5 class="my-0 mr-md-auto font-weight-normal">Company name</h5>
+    <nav class="my-2 my-md-0 mr-md-3">
+      <a class="p-2 text-dark" href="#">Support</a>
+    </nav>
+    <a class="btn btn-outline-primary" href="#">Sign up</a>
+  </div>
+
+  <div class="container px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1 class="display-4">Header</h1>
+    <p class="lead">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda autem commodi enim impedit laudantium maxime nemo sunt voluptate? Adipisci aliquid optio possimus vero vitae. Ad expedita inventore odio rem sequi!
+    </p>
+
+    <button class="btn btn-xl btn-primary" data-toggle="modal" data-target="#modal-test">Test modal</button>
+
+  </div>
+
+<div class="modal" tabindex="-1" role="dialog" id="modal-test">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 {{> footer }}
