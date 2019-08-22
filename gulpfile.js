@@ -33,6 +33,11 @@ const paths = {
     dist: './dist/assets/styles/',
     watch: './src/styles/**/*.{scss,sass}',
   },
+  fonts: {
+    src: './src/fonts/**/*.{woff,woff2,eot,ttf,svg}',
+    dist: './dist/assets/fonts/',
+    watch: './src/fonts/**/*.{woff,woff2,eot,ttf,svg}'
+  },
 };
 
 // -------------------------------------
@@ -52,6 +57,15 @@ gulp.task('styles', function () {
     }))
     .pipe(gulpIf(!production, sourcemaps.write()))
     .pipe(gulp.dest(paths.styles.dist));
+});
+
+// -------------------------------------
+//   Task: fonts
+// -------------------------------------
+
+gulp.task('fonts', function () {
+  return gulp.src(paths.fonts.src)
+    .pipe(gulp.dest(paths.fonts.dist));
 });
 
 // -------------------------------------
