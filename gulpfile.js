@@ -6,6 +6,7 @@ const notifier = require('node-notifier');
 const plumber = require('gulp-plumber');
 const gulpIf = require('gulp-if');
 const yargs =  require('yargs');
+const del = require('del');
 
 // Compile:
 const rename = require('gulp-rename');
@@ -26,6 +27,7 @@ const production = !!argv.production;
 // *************************************
 
 const paths = {
+  dist: './dist/',
   styles: {
     src: './src/styles/*.{scss,sass}',
     dist: './dist/assets/styles/',
@@ -50,6 +52,14 @@ gulp.task('styles', function () {
     }))
     .pipe(gulpIf(!production, sourcemaps.write()))
     .pipe(gulp.dest(paths.styles.dist));
+});
+
+// -------------------------------------
+//   Task: clean
+// -------------------------------------
+
+gulp.task('clean', function () {
+  return del(paths.dist);
 });
 
 // -------------------------------------
