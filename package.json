@@ -51,7 +51,12 @@
   "dependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
+    "@babel/register": "^7.5.5",
     "babel-loader": "^8.0.6",
+    "babel-register": "^6.26.0",
+    "fs": "0.0.1-security",
+    "gulp-handlebars": "^5.0.2",
+    "gulp-hb": "^8.0.0",
     "jquery": "^3.4.1"
   }
 }
