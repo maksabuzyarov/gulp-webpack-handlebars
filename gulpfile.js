@@ -18,6 +18,10 @@ const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const sass = require('gulp-sass');
 
+// Scripts
+const webpack = require('webpack');
+const webpackStream = require('webpack-stream');
+
 // Images:
 const imagemin = require('gulp-imagemin');
 const imageminPngquant = require('imagemin-pngquant');
@@ -31,6 +35,11 @@ const production = !!argv.production;
 // -------------------------------------
 //   Available tasks
 // -------------------------------------
+//     build
+//     styles
+//     fonts
+//     images
+//     clean
 //     say:hello
 // *************************************
 
@@ -48,11 +57,16 @@ const paths = {
   },
   images: {
     src: [
-      "./src/img/**/*.{jpg,jpeg,png,gif,tiff,svg}"
+      './src/img/**/*.{jpg,jpeg,png,gif,tiff,svg}'
     ],
-    dist: "./dist/assets/img/",
-    watch: "./src/img/**/*.{jpg,jpeg,png,gif,svg,tiff}"
-  }
+    dist: './dist/assets/img/',
+    watch: './src/img/**/*.{jpg,jpeg,png,gif,svg,tiff}'
+  },
+  scripts: {
+    src: './src/js/main.js',
+    dist: './dist/assets/js/',
+    watch: './src/js/**/*.js',
+  },
 };
 
 const config = {
@@ -91,6 +105,33 @@ const config = {
   ]
 };
 
+const webpackConfig = {
+  entry: {
+    main: "./src/js/main.js",
+  },
+
+  output: {
+    filename: "[name].js",
+  },
+
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: require.resolve('babel-loader'),
+          options: {
+            presets: [
+              ['@babel/preset-env', { modules: false }]
+            ]
+          }
+        }
+      }
+    ]
+  },
+};
+
 // -------------------------------------
 //   Task: styles
 // -------------------------------------
@@ -109,6 +150,24 @@ gulp.task('styles', function () {
     .pipe(gulpIf(!production, sourcemaps.write()))
     .pipe(gulp.dest(paths.styles.dist));
 });
+
+// -------------------------------------
+//   Task: scripts
+// -------------------------------------
+
+webpackConfig.mode = production ? "production" : "development";
+webpackConfig.devtool = production ? false : "source-map";
+
+gulp.task('scripts', function () {
+  return gulp.src(paths.scripts.src)
+    .pipe(plumber())
+    .pipe(webpackStream(webpackConfig), webpack)
+    .pipe(gulpIf(production, rename({
+      suffix: ".min"
+    })))
+    .pipe(gulp.dest(paths.scripts.dist));
+});
+
 
 // -------------------------------------
 //   Task: fonts
@@ -154,9 +213,9 @@ gulp.task('say:hello', function (done) {
 // -------------------------------------
 //   Task: default
 // -------------------------------------
-gulp.task('default', gulp.series('styles'));
+gulp.task('default', gulp.series('styles', 'scripts', 'images', 'fonts'));
 
 // -------------------------------------
 //   Task: build
 // -------------------------------------
-gulp.task('build', gulp.series('styles'));
+gulp.task('build', gulp.series('styles', 'scripts', 'images', 'fonts'));
