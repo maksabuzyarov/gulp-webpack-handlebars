@@ -42,9 +42,14 @@ const paths = {
     dist: './dist/assets/fonts/',
     watch: './src/fonts/**/*.{woff,woff2,eot,ttf,svg}',
   },
+  favicons: {
+    src: "./src/img/favicon/*.{jpg,jpeg,png,gif}",
+    dist: "./dist/assets/img/favicons/",
+  },
   images: {
     src: [
       './src/img/**/*.{jpg,jpeg,png,gif,tiff,svg}',
+      '!./src/img/favicon/*.{jpg,jpeg,png,gif,tiff,svg}',
     ],
     dist: './dist/assets/img/',
     watch: './src/img/**/*.{jpg,jpeg,png,gif,svg,tiff}',
@@ -71,7 +76,7 @@ requireDir('./tasks/');
 // -------------------------------------
 
 gulp.task('default',
-  gulp.series(gulp.parallel('styles', 'scripts', 'images', 'fonts', 'views'), 'server'));
+  gulp.series(gulp.parallel('styles', 'scripts', 'images', 'fonts', 'views', 'favicons'), 'server'));
 
 
 // -------------------------------------
@@ -80,6 +85,6 @@ gulp.task('default',
 
 gulp.task(
   'build',
-  gulp.series('clean', gulp.parallel('styles', 'scripts', 'images', 'fonts', 'views'), 'say:build'));
+  gulp.series('clean', gulp.parallel('styles', 'scripts', 'images', 'fonts', 'views', 'favicons'), 'say:build'));
 
 export { paths, config };
