@@ -61,8 +61,10 @@
     "fs": "0.0.1-security",
     "gulp-handlebars": "^5.0.2",
     "gulp-hb": "^8.0.0",
+    "gulp-svg-sprite": "^1.5.0",
     "jquery": "^3.4.1",
     "popper.js": "^1.15.0",
-    "require-dir": "^1.2.0"
+    "require-dir": "^1.2.0",
+    "svg4everybody": "^2.1.9"
   }
 }

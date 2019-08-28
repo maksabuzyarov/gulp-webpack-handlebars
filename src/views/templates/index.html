@@ -1,37 +1,57 @@
 {{> header title="Index page"}}
 
-  <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-    <h5 class="my-0 mr-md-auto font-weight-normal">Company name</h5>
-    <nav class="my-2 my-md-0 mr-md-3">
-      <a class="p-2 text-dark" href="#">Support</a>
-    </nav>
-    <a class="btn btn-outline-primary" href="#">Sign up</a>
-  </div>
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+  <h5 class="my-0 mr-md-auto font-weight-normal">Company name</h5>
+  <nav class="my-2 my-md-0 mr-md-3">
+    <a class="p-2 text-dark" href="#">Support</a>
+  </nav>
+  <a class="btn btn-outline-primary" href="#">Sign up</a>
+</div>
 
-  <div class="container px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-    <h1 class="display-4">Header</h1>
-    <p class="lead">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda autem commodi enim impedit laudantium maxime nemo sunt voluptate? Adipisci aliquid optio possimus vero vitae. Ad expedita inventore odio rem sequi!
-    </p>
+<div class="container px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-4">Header</h1>
+  <p class="lead">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda autem commodi enim impedit laudantium maxime nemo sunt voluptate? Adipisci aliquid optio possimus vero vitae. Ad expedita inventore odio rem sequi!
+  </p>
 
-    <button class="btn btn-xl btn-primary" data-toggle="modal" data-target="#modal-test">Test modal</button>
+  <button class="btn btn-xl btn-primary" data-toggle="modal" data-target="#modal-test">Test modal</button>
 
-    <div class="my-4">
-      <div class="display-4">Technologies</div>
-      <div class="row align-items-center">
-        <div class="col-4">
-          <img src="{{assets}}/img/sample/gulp.png" class="img-fluid" style="max-height: 200px">
-        </div>
-        <div class="col-4">
-          <img src="{{assets}}/img/sample/webpack.png" class="img-fluid">
-        </div>
-        <div class="col-4">
-          <img src="{{assets}}/img/sample/handlebars.png" class="img-fluid">
-        </div>
+  <div class="my-4">
+    <div class="display-4">Technologies</div>
+    <div class="row align-items-center">
+      <div class="col-4">
+        <img src="{{assets}}/img/sample/gulp.png" class="img-fluid" style="max-height: 200px">
+      </div>
+      <div class="col-4">
+        <img src="{{assets}}/img/sample/webpack.png" class="img-fluid">
+      </div>
+      <div class="col-4">
+        <img src="{{assets}}/img/sample/handlebars.png" class="img-fluid">
       </div>
     </div>
-
   </div>
+
+  <div class="my-4">
+    <div class="display-4 mb-4">Svg Sprites</div>
+    <div class="row align-items-center">
+      <div class="col-4">
+        <svg class="img-fluid text-success" viewBox="0 0 309.133 309.133" style="width: 200px;">
+          <use xlink:href="{{assets}}/img/sprites/sprite.svg#cute-rocket-launching"></use>
+        </svg>
+      </div>
+      <div class="col-4">
+        <svg class="img-fluid text-danger" viewBox="0 0 314.009 314.009" style="width: 200px;">
+          <use xlink:href="{{assets}}/img/sprites/sprite.svg#computer-bug"></use>
+        </svg>
+      </div>
+      <div class="col-4">
+        <svg class="img-fluid text-info" viewBox="0 0 310.861 310.861" style="width: 200px;">
+          <use xlink:href="{{assets}}/img/sprites/sprite.svg#binary-thinking"></use>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="modal" tabindex="-1" role="dialog" id="modal-test">
   <div class="modal-dialog modal-dialog-centered" role="document">
