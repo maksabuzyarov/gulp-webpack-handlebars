@@ -62,6 +62,8 @@ const paths = {
   scripts: {
     src: './src/js/main.js',
     dist: './dist/assets/js/',
+    srcOther: './src/js/other/*.js',
+    distOther: './dist/assets/js/other/',
     watch: './src/js/**/*.js',
   },
   vendors: {
@@ -75,6 +77,11 @@ const paths = {
 
 const config = {
   production: production,
+  fileInclude: {
+    prefix: '@@',
+    basepath: __dirname,
+    context: {},
+  },
 };
 
 requireDir('./tasks/');
