@@ -23,7 +23,7 @@ gulp.task('scripts:webpack', function () {
   webpackConfig.devtool = config.production ? false : 'source-map';
 
   return gulp.src(paths.scripts.src)
-    .pipe(plumber())
+    .pipe(plumber(config.plumber))
     .pipe(webpackStream(webpackConfig), webpack)
     .pipe(gulpIf(config.production, rename({
       suffix: '.min',
@@ -34,7 +34,7 @@ gulp.task('scripts:webpack', function () {
 
 gulp.task('scripts:other', function() {
   return gulp.src(paths.scripts.srcOther)
-    .pipe(plumber())
+    .pipe(plumber(config.plumber))
     .pipe(gulpIf(!config.production, sourcemaps.init()))
     .pipe(fileInclude(config.fileInclude))
     .pipe(gulp.dest(paths.scripts.distOther))

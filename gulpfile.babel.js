@@ -77,6 +77,12 @@ const paths = {
 
 const config = {
   production: production,
+  plumber: {
+    errorHandler: function(error) {
+      console.error(error.message);
+      this.emit('end');
+    }
+  },
   fileInclude: {
     prefix: '@@',
     basepath: __dirname,

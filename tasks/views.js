@@ -15,7 +15,7 @@ import { paths, config } from '../gulpfile.babel';
 //   Task: views
 // -------------------------------------
 
-gulp.task('views', function (done) {
+gulp.task('views', function () {
   let hbStream = hb({
     //debug: true
   })
@@ -30,7 +30,7 @@ gulp.task('views', function (done) {
     .helpers(paths.views.helpers + '/*.js');
 
   return gulp.src(paths.views.src)
-    .pipe(plumber())
+    .pipe(plumber(config.plumber))
     .pipe(hbStream)
     .pipe(beautify.html({
       indent_size: 2, preserve_newlines: false,

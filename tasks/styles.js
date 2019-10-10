@@ -18,7 +18,7 @@ import { paths, config } from '../gulpfile.babel';
 
 gulp.task('styles', function () {
   return gulp.src(paths.styles.src)
-    .pipe(plumber())
+    .pipe(plumber(config.plumber))
     .pipe(gulpIf(!config.production, sourcemaps.init()))
     .pipe(sass({
       includePaths: ['node_modules'],
