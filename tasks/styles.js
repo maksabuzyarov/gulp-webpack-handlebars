@@ -21,7 +21,8 @@ gulp.task('styles', function () {
     .pipe(plumber())
     .pipe(gulpIf(!config.production, sourcemaps.init()))
     .pipe(sass({
-      includePaths: ['node_modules']
+      includePaths: ['node_modules'],
+      precision: 7,
     }))
     .pipe(autoprefixer())
     .pipe(gulp.dest(paths.styles.dist))
