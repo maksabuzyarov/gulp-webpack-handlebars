@@ -14,6 +14,7 @@ const paths = {
     pages: './src/views/templates/',
     partials: './src/views/partials/',
     helpers: './src/views/helpers/',
+    data: './src/views/data',
     dist: './dist/',
     watch: './src/views/**/*.html',
   },

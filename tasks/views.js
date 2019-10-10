@@ -22,7 +22,7 @@ gulp.task('views', function () {
     .partials(paths.views.partials + '**/*.{hbs,html}')
 
     // Data
-    .data(config.html.data + '/**/*.{js,json}')
+    .data(paths.views.data + '/**/*.{js,json}')
     //.data(config.html.metadata)
 
     // Helpers
