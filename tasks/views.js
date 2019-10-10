@@ -7,6 +7,7 @@ import plumber from 'gulp-plumber';
 import replace from 'gulp-replace';
 import beautify from 'gulp-beautify';
 import browsersync from 'browser-sync';
+import hbLayouts from 'handlebars-layouts';
 import { paths, config } from '../gulpfile.babel';
 
 
@@ -21,11 +22,11 @@ gulp.task('views', function (done) {
     .partials(paths.views.partials + '**/*.{hbs,html}')
 
     // Data
-    //.data(config.html.data + '/**/*.{js,json}')
+    .data(config.html.data + '/**/*.{js,json}')
     //.data(config.html.metadata)
 
     // Helpers
-    //.helpers(require('handlebars-layouts'))
+    .helpers(hbLayouts)
     .helpers(paths.views.helpers + '/*.js');
 
   return gulp.src(paths.views.src)

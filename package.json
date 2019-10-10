@@ -38,6 +38,7 @@
     "gulp-size": "^3.0.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.1",
+    "handlebars-layouts": "^3.1.4",
     "imagemin-giflossy": "^5.1.10",
     "imagemin-jpeg-recompress": "^6.0.0",
     "imagemin-mozjpeg": "^8.0.0",
