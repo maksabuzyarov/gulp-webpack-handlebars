@@ -7,21 +7,6 @@ import requireDir from 'require-dir';
 const argv = yargs.argv;
 const production = !!argv.production;
 
-// -------------------------------------
-//   Available tasks
-// -------------------------------------
-//     build
-//     styles
-//     scripts
-//     views
-//     fonts
-//     images
-//     clean
-//     server
-//     say:hello
-//     say:build
-// *************************************
-
 const paths = {
   dist: './dist/',
   views: {
@@ -89,6 +74,10 @@ const config = {
     context: {},
   },
 };
+
+// -------------------------------------
+//   All tasks
+// -------------------------------------
 
 requireDir('./tasks/');
 
