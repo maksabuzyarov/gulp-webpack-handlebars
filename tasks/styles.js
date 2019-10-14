@@ -26,7 +26,7 @@ gulp.task('styles', function () {
     }))
     .pipe(autoprefixer())
     .pipe(gulp.dest(paths.styles.dist))
-    .pipe(cleanCSS())
+    .pipe(gulpIf(config.production, cleanCSS()))
     .pipe(rename({
       suffix: '.min',
     }))
