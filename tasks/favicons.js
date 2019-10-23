@@ -1,6 +1,6 @@
 "use strict";
 
-import { paths, config } from "../gulpfile.babel";
+import { paths } from "../gulpfile.babel";
 import gulp from "gulp";
 import favicons from "gulp-favicons";
 

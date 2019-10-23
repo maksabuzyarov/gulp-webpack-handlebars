@@ -11,6 +11,11 @@
     "build styles": "gulp styles --production",
     "build images": "gulp images --production"
   },
+  "browserslist": [
+    "last 2 version",
+    "> 1%",
+    "ie 11"
+  ],
   "keywords": [
     "gulp",
     "webpack",

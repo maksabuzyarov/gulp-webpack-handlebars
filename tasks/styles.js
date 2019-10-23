@@ -26,11 +26,12 @@ gulp.task('styles', function () {
     }))
     .pipe(autoprefixer())
     .pipe(gulp.dest(paths.styles.dist))
+    .pipe(browsersync.stream())
     .pipe(gulpIf(config.production, cleanCSS()))
     .pipe(rename({
       suffix: '.min',
     }))
     .pipe(gulpIf(!config.production, sourcemaps.write()))
     .pipe(gulp.dest(paths.styles.dist))
-    .on('end', browsersync.reload);
+    .pipe(browsersync.stream());
 });
