@@ -16,7 +16,7 @@ const paths = {
     helpers: './src/views/helpers/',
     data: './src/views/data',
     dist: './dist/',
-    watch: './src/views/**/*.html',
+    watch: './src/views/**/*.{html,hbs}',
   },
   styles: {
     src: './src/styles/*.{scss,sass}',
