@@ -11,7 +11,6 @@
 **:fire: BrowserSync**
 
 
-
 ## Features
 
 | Type           | List                                                         |
@@ -109,6 +108,8 @@ npm install
   - `img` - all images for optimization excluding directories with special logic:
 
     - `favicon` -  generating favicons from one image
+    
+    - `svg` - optimizes them and bakes them into SVG sprites
 
   - `views` 
 
