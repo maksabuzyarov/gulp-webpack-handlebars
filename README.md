@@ -64,11 +64,7 @@ npm install
 |   |   |-- favicon
 |   |   |   |-- logo.png
 |   |   |-- sample
-|   |   |   |-- gulp.png
-|   |   |   |-- handlebars.png
-|   |   |   |-- webpack.png
 |   |   |-- svg
-|   |       |-- binary-thinking.svg
 |   |-- js
 |   |   |-- modules
 |   |   |-- other
