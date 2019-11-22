@@ -83,6 +83,7 @@ npm install
 |           |-- pages
 |           |-- index.html
 |-- .babelrc.js
+|-- .browserslistrc
 |-- .gitignore
 |-- gulpfile.babel.js
 |-- package.json
