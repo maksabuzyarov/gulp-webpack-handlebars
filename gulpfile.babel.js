@@ -33,14 +33,15 @@ const paths = {
     dist: "./dist/assets/img/favicons/",
   },
   sprites: {
-    src: "./src/img/svg/*.svg",
-    dist: "./dist/assets/img/sprites/",
-    watch: "./src/img/svg/*.svg"
+    src: "./src/img/svg-sprite/*.svg",
+    dist: "./dist/assets/img/svg-sprite/",
+    watch: "./src/img/svg-sprite/*.svg"
   },
   images: {
     src: [
       './src/img/**/*.{jpg,jpeg,png,gif,tiff,svg}',
-      '!./src/img/favicon/*.{jpg,jpeg,png,gif,tiff,svg}',
+      '!./src/img/favicon/*',
+      '!./src/img/svg-sprite/*',
     ],
     dist: './dist/assets/img/',
     watch: './src/img/**/*.{jpg,jpeg,png,gif,svg,tiff}',
