@@ -27,9 +27,9 @@
     "frontend"
   ],
   "devDependencies": {
-    "@babel/core": "^7.7.2",
-    "@babel/preset-env": "^7.7.1",
-    "@babel/register": "^7.7.0",
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "@babel/register": "^7.7.4",
     "babel-loader": "^8.0.6",
     "babel-register": "^6.26.0",
     "browser-sync": "^2.26.7",
@@ -42,11 +42,11 @@
     "gulp-clean-css": "^4.2.0",
     "gulp-debug": "^4.0.0",
     "gulp-favicons": "^2.3.1",
-    "gulp-file-include": "^2.1.0",
+    "gulp-file-include": "^2.1.1",
     "gulp-handlebars": "^5.0.2",
     "gulp-hb": "^8.0.0",
     "gulp-if": "^3.0.0",
-    "gulp-imagemin": "^6.1.1",
+    "gulp-imagemin": "^6.2.0",
     "gulp-plumber": "^1.2.1",
     "gulp-rename": "^1.4.0",
     "gulp-replace": "^1.0.0",
@@ -62,15 +62,15 @@
     "imagemin-webp": "^5.1.0",
     "imagemin-zopfli": "^6.0.0",
     "node-notifier": "^6.0.0",
-    "webpack": "^4.41.1",
+    "webpack": "^4.41.2",
     "webpack-stream": "^5.2.1",
-    "yargs": "^14.2.0"
+    "yargs": "^15.0.2"
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "current-device": "^0.9.1",
+    "current-device": "^0.10.0",
     "jquery": "^3.4.1",
-    "popper.js": "^1.15.0",
+    "popper.js": "^1.16.0",
     "require-dir": "^1.2.0",
     "svg4everybody": "^2.1.9"
   }
