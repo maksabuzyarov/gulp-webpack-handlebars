@@ -106,7 +106,7 @@ npm install
 
     - `favicon` -  generating favicons from one image
     
-    - `svg` - optimizes them and bakes them into SVG sprites
+    - `svg-sprite` - optimizes them and bakes them into SVG sprites
 
   - `views` 
 
