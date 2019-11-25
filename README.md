@@ -64,7 +64,7 @@ npm install
 |   |   |-- favicon
 |   |   |   |-- logo.png
 |   |   |-- sample
-|   |   |-- svg
+|   |   |-- svg-sprite
 |   |-- js
 |   |   |-- modules
 |   |   |-- other
