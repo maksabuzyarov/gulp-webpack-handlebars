@@ -55,7 +55,6 @@
     "gulp-svg-sprite": "^1.5.0",
     "gulp-uglify": "^3.0.2",
     "handlebars-layouts": "^3.1.4",
-    "imagemin-giflossy": "^5.1.10",
     "imagemin-jpeg-recompress": "^6.0.0",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-pngquant": "^8.0.0",
