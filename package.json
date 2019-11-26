@@ -1,6 +1,6 @@
 {
   "name": "gulp-webpack-hbs",
-  "version": "2.0.0-alpha",
+  "version": "2.0.0",
   "description": "Gulp frontend builder with Webpack and Handlebars",
   "main": "gulpfile.babel.js",
   "author": "MaksAbuzyarov",
