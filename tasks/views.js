@@ -35,8 +35,6 @@ gulp.task('views', function () {
     .pipe(beautify.html({
       indent_size: 2, preserve_newlines: false,
     }))
-    .pipe(gulpIf(config.production, replace('.css', '.min.css')))
-    .pipe(gulpIf(config.production, replace('.js', '.min.js')))
     .pipe(gulp.dest(paths.views.dist))
     .on('end', browsersync.reload);
 });

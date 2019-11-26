@@ -25,9 +25,6 @@ gulp.task('scripts:webpack', function () {
   return gulp.src(paths.scripts.src)
     .pipe(plumber(config.plumber))
     .pipe(webpackStream(webpackConfig), webpack)
-    .pipe(gulpIf(config.production, rename({
-      suffix: '.min',
-    })))
     .pipe(gulp.dest(paths.scripts.dist))
     .on('end', browsersync.reload);
 });
@@ -40,7 +37,7 @@ gulp.task('scripts:other', function() {
     .pipe(gulp.dest(paths.scripts.distOther))
     .pipe(uglify())
     .pipe(rename({
-      extname: '.min.js',
+      suffix: '.min',
     }))
     .pipe(gulpIf(!config.production, sourcemaps.write()))
     .pipe(gulp.dest(paths.scripts.distOther));
