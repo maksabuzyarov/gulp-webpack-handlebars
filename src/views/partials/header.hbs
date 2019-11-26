@@ -7,14 +7,20 @@
   <title>{{title}}</title>
   <link rel="stylesheet" href="{{assets}}/styles/main.css">
 
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <!-- for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="application-name" lang="en" content="{{title}}">
+  <link rel="icon" sizes="192x192" href="{{assets}}/img/favicons/android-chrome-192x192.png">
+
+  <!-- for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="{{title}}">
 
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-
-  <meta name="theme-color" content="#fff">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#FFFFFF">
 
   <link rel="shortcut icon" href="{{assets}}/img/favicons/favicon.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="{{assets}}/img/favicons/favicon-16x16.png">
