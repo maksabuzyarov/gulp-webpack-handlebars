@@ -1,14 +1,18 @@
-# Front-end Boilerplate
+## Front-end Boilerplate
 
-**:rocket: Gulp 4**
+![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)
+[![license](https://img.shields.io/github/license/maksabuzyarov/gulp-webpack-hbs)](https://github.com/maksabuzyarov/gulp-webpack-hbs/blob/master/LICENSE)
+![version](https://img.shields.io/github/package-json/v/maksabuzyarov/gulp-webpack-hbs)
+[![commit activity](https://img.shields.io/github/commit-activity/m/maksabuzyarov/gulp-webpack-hbs?cache=boost)](https://github.com/maksabuzyarov/gulp-webpack-hbs/commits/master)
+[![gulp](https://img.shields.io/github/package-json/dependency-version/maksabuzyarov/gulp-webpack-hbs/dev/gulp)](https://www.npmjs.com/package/gulp)
+[![webpack](https://img.shields.io/github/package-json/dependency-version/maksabuzyarov/gulp-webpack-hbs/dev/webpack)](https://www.npmjs.com/package/webpack)
+[![babel](https://img.shields.io/github/package-json/dependency-version/maksabuzyarov/gulp-webpack-hbs/dev/@babel/core)](https://www.npmjs.com/package/@babel/core)
 
-**:package: Webpack 4**
+**gulp-webpack-hbs** is a flexible template for web development. It includes many tools for creating responsive, high-performance and lightweight pages.
 
-**:man: Handlebars**
+:rocket: Gulp 4 + Webpack 4 +​ ​Handlebars + Babel + ​BrowserSync :fire:
 
-**:recycle: Babel**
 
-**:fire: BrowserSync**
 
 
 ## Features
@@ -19,7 +23,7 @@
 | CSS            | [SASS / SCSS](https://www.npmjs.com/package/gulp-sass), [CleanCSS](https://www.npmjs.com/package/gulp-clean-css), [Autoprefixer](https://www.npmjs.com/package/gulp-autoprefixer) |
 | JS             | [Webpack](https://www.npmjs.com/package/webpack), [Babel](https://www.npmjs.com/package/babel-loader) |
 | JS Examples    | [FileInclude](https://www.npmjs.com/package/gulp-file-include), [Uglify](https://www.npmjs.com/package/gulp-uglify) |
-| HTML Templates | [Handlebars.js](https://www.npmjs.com/package/handlebars), [handlebars-layouts](https://github.com/shannonmoeller/handlebars-layouts)    |
+| HTML Templates | [Handlebars.js](https://www.npmjs.com/package/handlebars), [handlebars-layouts](https://github.com/shannonmoeller/handlebars-layouts) |
 | Images         | [ImageMin](https://www.npmjs.com/package/gulp-imagemin)      |
 | Live Reload    | [BrowserSync](https://www.npmjs.com/package/browser-sync)    |
 | Debug          | [Sourcemaps](https://www.npmjs.com/package/gulp-sourcemaps), [Plumber](https://www.npmjs.com/package/gulp-plumber) |
@@ -105,7 +109,7 @@ npm install
   - `img` - all images for optimization excluding directories with special logic:
 
     - `favicon` -  generating favicons from one image
-    
+
     - `svg-sprite` - optimizes them and bakes them into SVG sprites
 
   - `views` 
