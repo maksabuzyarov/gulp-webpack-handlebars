@@ -1,5 +1,5 @@
 {
-  "name": "gulp-webpack-hbs",
+  "name": "gulp-webpack-handlebars",
   "version": "2.0.0",
   "description": "Gulp frontend builder with Webpack and Handlebars",
   "main": "gulpfile.babel.js",
@@ -15,10 +15,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maksabuzyarov/gulp-webpack-hbs.git"
+    "url": "git+https://github.com/maksabuzyarov/gulp-webpack-handlebars.git"
   },
   "bugs": {
-    "url": "https://github.com/maksabuzyarov/gulp-webpack-hbs/issues"
+    "url": "https://github.com/maksabuzyarov/gulp-webpack-handlebars/issues"
   },
   "keywords": [
     "gulp",
