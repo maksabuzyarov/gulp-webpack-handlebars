@@ -2,7 +2,7 @@ import { paths, config } from "../../../gulpfile.babel";
 import path from 'path';
 
 module.exports.register = function (Handlebars) {
-  Handlebars.registerHelper("index", function(options) {
+  Handlebars.registerHelper("indexDir", function(options) {
 
     let file;
 

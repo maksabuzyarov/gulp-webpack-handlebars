@@ -1,6 +1,6 @@
 {
   "name": "gulp-webpack-handlebars",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Gulp frontend builder with Webpack and Handlebars",
   "main": "gulpfile.babel.js",
   "author": "MaksAbuzyarov",
