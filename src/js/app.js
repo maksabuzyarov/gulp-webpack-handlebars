@@ -1,19 +1,19 @@
 import svg4everybody from 'svg4everybody';
 
-window.Site = {};
+if (!window.site) window.site = {};
 
 // One time after page loading
-window.Site.initPage = function () {
+window.site.initPage = function () {
 
 };
 
 // Every time after creating new elements. For example: after ajax loading
-window.Site.initElements = function () {
+window.site.initElements = function () {
   svg4everybody();
 };
 
 window.addEventListener('load', () => {
-  window.Site.initPage();
-  window.Site.initElements();
+  window.site.initPage();
+  window.site.initElements();
 });
 
