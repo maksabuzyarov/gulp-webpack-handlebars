@@ -84,6 +84,10 @@ const config = {
     basepath: __dirname,
     context: {},
   },
+  metadata: {
+    author: 'Maksim Abuzyarov',
+    year: (new Date()).getFullYear()
+  }
 };
 
 // -------------------------------------
