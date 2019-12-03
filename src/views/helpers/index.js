@@ -15,6 +15,12 @@ module.exports.register = function (Handlebars) {
     let relative = path.relative(paths.views.pages, path.relative(file.cwd, path.dirname(file.path)));
     let currentPath = path.join(paths.views.dist, relative);
 
-    return new Handlebars.SafeString(path.relative(currentPath, paths.dist).split('\\').join('/'));
+    let index = path.relative(currentPath, paths.dist).split('\\').join('/');
+
+    if (!index) {
+      index = '.';
+    }
+
+    return new Handlebars.SafeString(index);
   });
 };
