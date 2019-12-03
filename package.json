@@ -7,11 +7,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "gulp",
-    "build": "gulp build --production",
-    "build views": "gulp views --production",
-    "build scripts": "gulp scripts --production",
-    "build styles": "gulp styles --production",
-    "build images": "gulp images --production"
+    "build": "gulp build --production"
   },
   "repository": {
     "type": "git",
