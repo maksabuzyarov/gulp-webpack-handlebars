@@ -3,9 +3,18 @@
 import gulp from 'gulp';
 import yargs from 'yargs';
 import requireDir from 'require-dir';
+import c from 'ansi-colors';
 
 const argv = yargs.argv;
 const production = !!argv.production;
+
+if (production) {
+  console.log(c.green.bold.underline('🚚 Production mode'));
+} else {
+  console.log(c.yellow.bold.underline('🔧 Development mode'));
+}
+
+
 
 const paths = {
   dist: './dist/',
