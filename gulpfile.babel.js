@@ -75,7 +75,7 @@ const config = {
   production: production,
   plumber: {
     errorHandler: function(error) {
-      console.error(error.message);
+      console.log(c.red(error.message));
       this.emit('end');
     }
   },
