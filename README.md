@@ -20,10 +20,9 @@
   * [Install](#install)
   * [Use tasks](#use-tasks)
   * [Use SVG sprite](#how-to-use-svg-sprite)
-
+  
 * [Features](#features)
 * [File structure](#file-structure)
-
 
 
 ## Getting Started
@@ -39,8 +38,6 @@ git clone https://github.com/maksabuzyarov/gulp-webpack-handlebars.git
 cd gulp-webpack-handlebars
 npm install
 ```
-
-
 
 ### Use tasks
 
@@ -77,7 +74,7 @@ You can get viewBox value from your SVG file or using devTools on the page after
 
 In this case, the image does not respond to color changes.
 
-
+**[⬆ back to menu](#documentation)**
 
 ## Features
 
@@ -94,7 +91,7 @@ In this case, the image does not respond to color changes.
 | More           | [Favicons](https://www.npmjs.com/package/favicons), [SVG Sprites](https://www.npmjs.com/package/gulp-svg-sprite), [Notifier](https://www.npmjs.com/package/node-notifier), [Changed](https://www.npmjs.com/package/gulp-changed) |
 | Included JS    | [Jquery](https://www.npmjs.com/package/jquery), [Bootstrap 4](https://www.npmjs.com/package/bootstrap), [CurrentDevice](https://www.npmjs.com/package/current-device) |
 
-
+**[⬆ back to menu](#documentation)**
 
 ## File structure
 
@@ -166,7 +163,7 @@ In this case, the image does not respond to color changes.
 
       - `pages` - all pages
 
-       
+**[⬆ back to menu](#documentation)** 
 
 ## Copyright and license
 
