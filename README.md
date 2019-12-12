@@ -88,7 +88,8 @@ In this case, the image does not respond to color changes.
 |   |-- img
 |   |   |-- favicon
 |   |   |   |-- logo.png
-|   |   |-- sample
+|   |   |-- content (optional)
+|   |   |-- main (optional)
 |   |   |-- svg-sprite
 |   |-- js
 |   |   |-- modules
@@ -127,8 +128,9 @@ In this case, the image does not respond to color changes.
 
   - `fonts` - fonts files in directories named by font name. For example *fonts/Ubuntu/Regular.{woff, woff2, ttf}*
 
-  - `img` - all images for optimization excluding directories with special logic:
-
+  - `img` - all images for optimization:
+    - `content` - optional directory (Implied as: dynamic images for pages, may be removed after placing the layout on the CMS)
+    - `main` - optional directory (Implied as: static template images (logo, background and etc.))
     - `favicon` -  generating favicons from one image
 
     - `svg-sprite` - optimizes them and bakes them into SVG sprites
