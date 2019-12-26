@@ -50,7 +50,7 @@ npm install
 
 ### How to use SVG sprite?
 
-#### Add images
+##### Add images
 
 1. `optional` Change color values (`fill` or `stroke`) in your SVG file to `currentColor` to support dynamic color changes.
 2. Put SVG file in `src/img/svg-sprite` directory.
