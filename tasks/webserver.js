@@ -20,6 +20,7 @@ gulp.task('server', function(done) {
   gulp.watch(paths.styles.watch, {usePolling: true}, gulp.parallel('styles'));
   gulp.watch(paths.scripts.watch, {usePolling: true}, gulp.parallel('scripts'));
   gulp.watch(paths.images.watch, {usePolling: true}, gulp.parallel('images'));
+  gulp.watch(paths.sprites.watch, {usePolling: true}, gulp.parallel('sprites'));
 
   return done();
 });
