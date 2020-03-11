@@ -3,10 +3,6 @@
 ![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)
 [![license](https://img.shields.io/github/license/maksabuzyarov/gulp-webpack-handlebars)](https://github.com/maksabuzyarov/gulp-webpack-handlebars/blob/master/LICENSE)
 ![version](https://img.shields.io/github/package-json/v/maksabuzyarov/gulp-webpack-handlebars)
-[![commit activity](https://img.shields.io/github/commit-activity/m/maksabuzyarov/gulp-webpack-handlebars?cache=refresh)](https://github.com/maksabuzyarov/gulp-webpack-handlebars/commits/master)
-[![gulp](https://img.shields.io/github/package-json/dependency-version/maksabuzyarov/gulp-webpack-handlebars/dev/gulp)](https://www.npmjs.com/package/gulp)
-[![webpack](https://img.shields.io/github/package-json/dependency-version/maksabuzyarov/gulp-webpack-handlebars/dev/webpack)](https://www.npmjs.com/package/webpack)
-[![babel](https://img.shields.io/github/package-json/dependency-version/maksabuzyarov/gulp-webpack-handlebars/dev/@babel/core)](https://www.npmjs.com/package/@babel/core)
 
 **gulp-webpack-handlebars** is a flexible template for web development. It includes many tools for creating responsive, high-performance and lightweight pages.
 
