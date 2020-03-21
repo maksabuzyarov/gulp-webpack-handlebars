@@ -39,7 +39,7 @@ npm install
 
 |                | Task Name                                    | Description                                               | Environment |
 | -------------- | :------------------------------------------- | :-------------------------------------------------------- | :---------- |
-| :construction: | `npm run gulp` or `gulp`                     | Compile dev build, start the server and watch for changes | Development |
+| :construction: | `npm run dev` or `gulp`                     | Compile dev build, start the server and watch for changes | Development |
 | :factory:      | `npm run build` or `gulp build --production` | Compile production build                                  | Production  |
 
 
