@@ -1,9 +1,8 @@
-import { paths, config } from "../../../gulpfile.babel";
-import path from 'path';
+export default {
+  register(Handlebars) {
+    Handlebars.registerHelper('time', function () {
 
-module.exports.register = function (Handlebars) {
-  Handlebars.registerHelper("time", function(options) {
-
-    return (new Date()).getTime();
-  });
+      return (new Date()).getTime();
+    });
+  },
 };

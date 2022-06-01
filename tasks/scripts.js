@@ -11,7 +11,7 @@ import webpackStream from 'webpack-stream';
 import webpackConfig from '../webpack.config.js';
 import browsersync from 'browser-sync';
 import sourcemaps from 'gulp-sourcemaps';
-import { paths, config } from '../gulpfile.babel';
+import { paths, config } from '../gulpfile.js';
 
 
 // -------------------------------------

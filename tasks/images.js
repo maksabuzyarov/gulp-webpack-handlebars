@@ -3,10 +3,11 @@
 import gulp from 'gulp';
 import changed from 'gulp-changed';
 import imagemin from 'gulp-imagemin';
+import imageminSvgo from 'imagemin-svgo';
 import imageminZopfli from 'imagemin-zopfli';
 import imageminMozjpeg from 'imagemin-mozjpeg';
 import imageminPngquant from 'imagemin-pngquant';
-import { paths } from '../gulpfile.babel';
+import { paths } from '../gulpfile.js';
 
 
 // -------------------------------------
@@ -28,7 +29,7 @@ gulp.task('images', function () {
         progressive: true,
         quality: 90,
       }),
-      imagemin.svgo({
+      imageminSvgo({
         plugins: [
           { removeViewBox: false },
           { removeUnusedNS: false },

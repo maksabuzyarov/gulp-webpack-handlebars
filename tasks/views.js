@@ -2,13 +2,14 @@
 
 import hb from 'gulp-hb';
 import gulp from 'gulp';
-import gulpIf from 'gulp-if';
 import plumber from 'gulp-plumber';
-import replace from 'gulp-replace';
 import beautify from 'gulp-beautify';
 import browsersync from 'browser-sync';
 import hbLayouts from 'handlebars-layouts';
-import { paths, config } from '../gulpfile.babel';
+import { config, paths } from '../gulpfile.js';
+import assetsHelper from '../src/views/helpers/assets.js';
+import indexDirHelper from '../src/views/helpers/indexDir.js';
+import timeHelper from '../src/views/helpers/time.js';
 
 
 // -------------------------------------
@@ -27,7 +28,10 @@ gulp.task('views', function () {
 
     // Helpers
     .helpers(hbLayouts)
-    .helpers(paths.views.helpers + '/*.js');
+    //.helpers(paths.views.helpers + '/*.js')
+    .helpers(assetsHelper)
+    .helpers(indexDirHelper)
+    .helpers(timeHelper);
 
   return gulp.src(paths.views.src)
     .pipe(plumber(config.plumber))

@@ -5,4 +5,4 @@ import bootstrap from 'bootstrap';
 
 import device from 'current-device';
 
-require('./app');
+import './app.js';

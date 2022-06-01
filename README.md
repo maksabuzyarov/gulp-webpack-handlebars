@@ -6,7 +6,7 @@
 
 **gulp-webpack-handlebars** is a flexible template for web development. It includes many tools for creating responsive, high-performance and lightweight pages.
 
-:rocket: Gulp 4 + Webpack 4 + Handlebars + Babel + BrowserSync :fire:
+:rocket: Gulp 4 + Webpack 5 + Handlebars + Babel + BrowserSync :fire:
 
 
 

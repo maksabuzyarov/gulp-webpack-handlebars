@@ -2,7 +2,7 @@
 
 import gulp from 'gulp';
 import browsersync from 'browser-sync';
-import { paths } from '../gulpfile.babel';
+import { paths } from '../gulpfile.js';
 
 
 // -------------------------------------

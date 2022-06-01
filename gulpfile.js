@@ -2,10 +2,13 @@
 
 import gulp from 'gulp';
 import yargs from 'yargs';
-import requireDir from 'require-dir';
+// import requireDir from 'require-dir';
 import c from 'ansi-colors';
+import { resolve } from 'path';
 
-const argv = yargs.argv;
+const __dirname = resolve();
+
+const argv = yargs().argv;
 const production = !!argv.production;
 
 if (production) {
@@ -94,8 +97,17 @@ const config = {
 //   All tasks
 // -------------------------------------
 
-requireDir('./tasks/');
-
+import './tasks/clean.js';
+import './tasks/favicons.js';
+import './tasks/fonts.js';
+import './tasks/images.js';
+import './tasks/notify.js';
+import './tasks/scripts.js';
+import './tasks/sprites.js';
+import './tasks/styles.js';
+import './tasks/vendors.js';
+import './tasks/views.js';
+import './tasks/webserver.js';
 
 // -------------------------------------
 //   Task: default

@@ -2,7 +2,7 @@
 
 import gulp from "gulp";
 import del from "del";
-import { paths } from '../gulpfile.babel';
+import { paths } from '../gulpfile.js';
 
 
 // -------------------------------------

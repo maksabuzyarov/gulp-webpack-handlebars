@@ -1,7 +1,7 @@
 'use strict';
 
 import gulp from "gulp";
-import { paths } from '../gulpfile.babel';
+import { paths } from '../gulpfile.js';
 
 
 // -------------------------------------
